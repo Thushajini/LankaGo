@@ -1,0 +1,88 @@
+{
+    "places": [
+        {
+            "id": 1,
+            "name": "Sigiriya Rock Fortress",
+            "category": "Historical",
+            "rating": 4.8,
+            "image":  "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+            "location": "Dambulla, Matale District",
+            "description": "An ancient rock fortress and palace ruin, surrounded by gardens and frescoes.",
+            "distance":"5.2 km",
+            "mapLink":"https://www.google.com/maps/search/?api=1&query=Sigiriya+Sri+Lanka",
+            "reviews": 230,
+            "latitude":7.9570,
+            "longitude":80.7603
+        },
+        {
+            "id": 2,
+            "name": "Yala National Park",
+            "category": "Nature",
+            "rating": 4.6,
+            "image": "https://images.unsplash.com/photo-1543852786-1cf6624b46cd",
+            "location": "Hambantota, Southern Province",
+            "description": "A wildlife sanctuary known for its leopard population, diverse flora and fauna.",
+            "distance":"10.5 km",
+            "mapLink":" https://www.google.com/maps/search/?api=1&query=Yala+National+Park+Sri+Lanka",
+            "reviews": 150,
+            "latitude":6.3619,
+            "longitude":81.5088
+        },
+        {
+            "id": 3,
+            "name": "Galle Fort",
+            "category": "Historical",
+            "rating": 4.7,
+            "image": "https://images.unsplash.com/photo-1516483638264-a53087d9705f",
+            "location": "Galle, Southern Province",
+            "description": "A UNESCO World Heritage Site, this fort was built by the Portuguese and later fortified by the Dutch.",
+            "distance":"15.0 km",
+            "mapLink":" https://www.google.com/maps/search/?api=1&query=Galle+Fort+Sri+Lanka",
+            "reviews": 180,
+            "latitude":6.0333,
+            "longitude":80.2167
+        },
+        {
+            "id": 4,
+            "name": "Ella Rock",
+            "category": "Nature",
+            "rating": 4.5,
+            "image": "https://images.unsplash.com/photo-1516483638264-a53087d9705f",
+            "location": "Ella, Badulla District",
+            "description": "A popular hiking destination offering panoramic views of the surrounding tea plantations and valleys.",
+            "distance":"8.3 km",
+            "mapLink":" https://www.google.com/maps/search/?api=1&query=Ella+Rock+Sri+Lanka",
+            "reviews": 120,
+            "latitude":6.8667,
+            "longitude":81.0466
+        },
+        {
+            "id": 5,
+            "name": "Dambulla Cave Temple",
+            "category": "Historical",
+            "rating": 4.8,
+            "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+            "location": "Dambulla, Matale District",
+            "description": "A complex of cave temples adorned with Buddhist mural paintings and statues.",
+            "distance":"6.7 km",
+            "mapLink":" https://www.google.com/maps/search/?api=1&query=Dambulla+Cave+Temple+Sri+Lanka",
+            "reviews": 200,
+            "latitude":7.8569,
+            "longitude":80.6528
+        },
+        {
+            "id": 6,
+            "name": "Nallur Kandaswamy Temple",
+            "category": "Historical",
+            "rating": 4.7,
+            "image": "https://images.unsplash.com/photo-1516483638264-a53087d9705f",
+            "location": "Jaffna,Jaffna District",
+            "description": "A historic city known for its rich Tamil culture, ancient temples, and vibrant markets.",
+            "distance":"7.2 km",
+            "mapLink":" https://www.google.com/maps/search/?api=1&query=Nallur+Kandaswamy+Temple+Sri+Lanka",
+            "reviews": 5678,
+            "latitude":9.6745,
+            "longitude":80.0294
+        }
+    ]
+}
