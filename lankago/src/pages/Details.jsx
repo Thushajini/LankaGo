@@ -187,11 +187,7 @@ hover:scale-105 ${
             🗺️ Open in Maps
           </button>
         </div>
-        <div className="mt-8">
-
- 
-
-</div>
+        
       </div>
     </div>
   );
