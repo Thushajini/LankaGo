@@ -5,6 +5,7 @@ import PlaceCard from "../components/PlaceCard";
 import { useState, useEffect } from "react";
 
 import { getPlaces } from "../services/api";
+import {imageMap} from "../utils/imageMap";
 
 function Home({ favorites, toggleFavorite }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -71,7 +72,7 @@ function Home({ favorites, toggleFavorite }) {
               name={place.name}
               category={place.category}
               rating={place.rating}
-              image={place.image}
+              image={imageMap[place.image]}
               location={place.location}
               isFavorite={favorites.includes(Number(place.id))}
               toggleFavorite={toggleFavorite}

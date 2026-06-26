@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { getPlaceById } from "../services/api";
 import { useState, useEffect } from "react";
 import { LuSend } from "react-icons/lu";
+import { imageMap } from "../utils/imageMap";
 
 
 export default function Details({ favorites, toggleFavorite }) {
@@ -98,7 +99,7 @@ useEffect(() => {
     <div className="min-h-screen bg-[#F8F8F8]">
       <div className="relative">
         <img
-          src={places.image}
+          src={imageMap[places.image]}
           alt={places.name}
           className="w-full h-80 object-cover hover:scale-100 transition duration-500 "
         />

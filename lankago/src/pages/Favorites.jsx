@@ -3,7 +3,7 @@ import FavoriteCard from "../components/FavoriteCard";
 import BottomNavbar from "../components/BottomNav";
 import { useEffect, useState } from "react";
 import { getPlaces } from "../services/api";
-
+import { imageMap } from "../utils/imageMap";
 export default function Favorites({ favorites, toggleFavorite, setFavorites }) {
   const [places, setPlaces] = useState([]);
   useEffect(() => {
@@ -36,7 +36,7 @@ export default function Favorites({ favorites, toggleFavorite, setFavorites }) {
         {/* Right Delete Button */}
         <button
           onClick={clearAllFavorites}
-          className="absolute right-9 text-3xl text-gray-700 hover:text-red-500 transition"
+          className="absolute right-8 text-2xl text-gray-700 hover:text-red-500 transition"
         >
           🗑️
         </button>
@@ -55,7 +55,7 @@ export default function Favorites({ favorites, toggleFavorite, setFavorites }) {
               key={places.id}
               id={places.id}
               name={places.name}
-              image={places.image}
+              image={imageMap[places.image]}
               category={places.category}
               rating={places.rating}
               toggleFavorite={toggleFavorite}
