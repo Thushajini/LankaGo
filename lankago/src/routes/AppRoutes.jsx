@@ -3,7 +3,7 @@ import Splash from "../pages/Splash.jsx";
 import Home from "../pages/Home.jsx";
 import Details from "../pages/Details.jsx";
 import Favorites from "../pages/Favorites.jsx";
-import About from "../pages/About.jsx";
+
 import { useState,useEffect } from "react";
 import Nearby from "../pages/Nearby.jsx";
 
@@ -37,7 +37,7 @@ useEffect(() => {
         <Route path="/home" element={<Home favorites={favorites} toggleFavorite={toggleFavorite}   />} />
         <Route path="/details/:id" element={<Details  favorites={favorites} toggleFavorite={toggleFavorite}   />} />
         <Route path="/favorites" element={<Favorites  favorites={favorites} toggleFavorite={toggleFavorite} setFavorites={setFavorites} />} />
-        <Route path="/about" element={<About />} />
+      
         <Route path="/nearby" element={<Nearby/>}/>
       </Routes>
     </BrowserRouter>

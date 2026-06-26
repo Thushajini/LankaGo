@@ -34,13 +34,13 @@ export default function BottomNavbar() {
       </button>
 
       <button
-        onClick={() => navigate("/about")}
+        onClick={() => navigate("/nearby")}
         className={`flex flex-col items-center ${
           isActive("/about") ? "text-green-600" : "text-gray-500"
         }`}
       >
-        👤
-        <span className="text-sm">About</span>
+         📍
+        <span className="text-sm">Nearby</span>
       </button>
     </div>
   );
