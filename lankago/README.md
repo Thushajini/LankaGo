@@ -1,16 +1,122 @@
-# React + Vite
+# LankaGo - Sri Lanka Tourism Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+LankaGo is a responsive tourism web application developed using React and Tailwind CSS. The application helps users discover popular tourist destinations in Sri Lanka, search places, view detailed information, save favorite places, and find nearby attractions using geolocation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Framework and Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React.js
+* Vite
+* Tailwind CSS
+* React Router DOM
+* React Icons
+* JSON Server (Mock REST API)
+* Browser Geolocation API
+* Local Storage
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+* Responsive Splash Screen
+* Home Page with Search
+* Category Filtering
+* Tourist Place Details
+* Favorite Places (Local Storage)
+* Nearby Places using Geolocation
+* Google Maps Integration
+* Mobile Responsive Design
+
+---
+
+## Browser Compatibility
+
+The application has been tested and works correctly on the following browsers:
+
+* Google Chrome (Recommended)
+* Microsoft Edge
+* Mozilla Firefox
+
+For the best experience, use the latest version of Google Chrome.
+
+---
+
+## Prerequisites
+
+Before running the project, install:
+
+* Node.js (v18 or later)
+* npm
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Navigate to the project folder:
+
+```bash
+cd lankago
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+---
+
+## Running the JSON Server
+
+Start the mock API:
+
+```bash
+npx json-server --watch db.json --port 3001
+```
+
+The API will be available at:
+
+```
+http://localhost:3001
+```
+
+---
+
+## Running the Application
+
+Start the React development server:
+
+```bash
+npm run dev
+```
+
+Open your browser and visit:
+
+```
+http://localhost:5173
+```
+
+---
+
+## Project Structure
+
+```
+src/
+ ├── assets/
+ ├── components/
+ ├── pages/
+ ├── services/
+ ├── App.jsx
+ └── main.jsx
+```
+
+---
