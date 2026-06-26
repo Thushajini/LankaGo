@@ -5,22 +5,34 @@ import { getPlaceById } from "../services/api";
 import { useState, useEffect } from "react";
 import { LuSend } from "react-icons/lu";
 
+
 export default function Details({ favorites, toggleFavorite }) {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [places, setPlaces] = useState([]);
+  const [places, setPlaces] = useState();
   const [loading, setLoading] = useState(true);
   const [userLocation, setUserLocation] = useState(null);
 
-  useEffect(() => {
-    async function loadPlace() {
-      const data = await getPlaceById(id);
-      setPlaces(data);
-      setLoading(false);
-    }
 
-    loadPlace();
-  }, [id]);
+
+  
+
+
+
+
+useEffect(() => {
+  async function loadPlace() {
+
+    const data = await getPlaceById(id);
+    setPlaces(data);
+
+  
+
+    setLoading(false);
+  }
+
+  loadPlace();
+}, [id]);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -51,8 +63,12 @@ export default function Details({ favorites, toggleFavorite }) {
 
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
-    return (R * c).toFixed(1);
+    return (R * c);
   }
+
+  
+
+
 
   const distance = userLocation
     ? calculateDistance(
@@ -104,26 +120,9 @@ export default function Details({ favorites, toggleFavorite }) {
           {isFavorite ? "❤️" : "🤍"}
         </button>
 
-        {/* Dots */}
+      
 
-        {/* <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-          <span className="w-2 h-2 bg-white rounded-full"></span>
-
-          <span className="w-2 h-2 bg-gray-300 rounded-full"></span>
-
-          <span className="w-2 h-2 bg-gray-300 rounded-full"></span>
-        </div>
-      </div> */}
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-          {[1, 2, 3].map((dot) => (
-            <span
-              key={dot}
-              className={`w-3 h-3 rounded-full ${
-                dot === 1 ? "bg-white" : "bg-gray-300"
-              }`}
-            />
-          ))}
-        </div>
+        
       </div>
 
       <div className="p-5">
@@ -153,7 +152,7 @@ export default function Details({ favorites, toggleFavorite }) {
           <div>
             <h2 className="font-bold text-2xl text-gray-800">
               You are
-              {distance ? ` ${distance}km ` : "..."}
+              {distance ? ` ${distance.toFixed(1)}km ` : "..."}
               away
             </h2>
 
@@ -188,6 +187,11 @@ hover:scale-105 ${
             🗺️ Open in Maps
           </button>
         </div>
+        <div className="mt-8">
+
+ 
+
+</div>
       </div>
     </div>
   );

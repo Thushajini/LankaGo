@@ -3,7 +3,7 @@ import CategoryFilter from "../components/CategoryFilter";
 import SearchBar from "../components/SearchBar";
 import PlaceCard from "../components/PlaceCard";
 import { useState, useEffect } from "react";
-import SectionHeader from "../components/SectionHeader";
+
 import { getPlaces } from "../services/api";
 
 function Home({ favorites, toggleFavorite }) {
@@ -46,7 +46,7 @@ function Home({ favorites, toggleFavorite }) {
 
           <h1 className="text-3xl font-bold text-green-700 ">LankaGo</h1>
 
-          {/* <button className="text-2xl">🔔</button> */}
+          {/* <button className="text-2xl p-6">🔔</button> */}
         </div>
 
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
@@ -57,7 +57,11 @@ function Home({ favorites, toggleFavorite }) {
         />
       </div>
       <div className="px-5 mt-6">
-        <SectionHeader title="Popular Places" buttonText="View all" />
+        
+         <div className="flex justify-between items-center px-5 mt-6 mb-4">
+      <h2 className="text-2xl font-bold text-gray-900">Popular Places</h2>
+      
+    </div>
         {/* PLACE CARDS */}
         <div className="p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {filteredPlaces.map((place) => (
