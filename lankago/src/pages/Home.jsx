@@ -3,9 +3,8 @@ import CategoryFilter from "../components/CategoryFilter";
 import SearchBar from "../components/SearchBar";
 import PlaceCard from "../components/PlaceCard";
 import { useState, useEffect } from "react";
-
 import { getPlaces } from "../services/api";
-import {imageMap} from "../utils/imageMap";
+import { imageMap } from "../utils/imageMap";
 
 function Home({ favorites, toggleFavorite }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -20,7 +19,6 @@ function Home({ favorites, toggleFavorite }) {
       setPlaces(data);
       setLoading(false);
     }
-
     loadPlaces();
   }, []);
 
@@ -43,11 +41,7 @@ function Home({ favorites, toggleFavorite }) {
     <div className="min-h-screen bg-[#F5F7FA] pb-20">
       <div className="bg-white px-5 pt-6 pb-5 shadow-sm rounded-b-3xl">
         <div className="flex items-center justify-center ">
-          {/* <button className="text-2xl text-gray-700">☰</button> */}
-
           <h1 className="text-3xl font-bold text-green-700 ">LankaGo</h1>
-
-          {/* <button className="text-2xl p-6">🔔</button> */}
         </div>
 
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
@@ -58,11 +52,9 @@ function Home({ favorites, toggleFavorite }) {
         />
       </div>
       <div className="px-5 mt-6">
-        
-         <div className="flex justify-between items-center px-5 mt-6 mb-4">
-      <h2 className="text-2xl font-bold text-gray-900">Popular Places</h2>
-      
-    </div>
+        <div className="flex justify-between items-center px-5 mt-6 mb-4">
+          <h2 className="text-2xl font-bold text-gray-900">Popular Places</h2>
+        </div>
         {/* PLACE CARDS */}
         <div className="p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {filteredPlaces.map((place) => (
