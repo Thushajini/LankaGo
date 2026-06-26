@@ -9,16 +9,6 @@ import Nearby from "../pages/Nearby.jsx";
 
 
 function AppRoutes(){
-  const [darkMode, setDarkMode] = useState(() => {
-  return localStorage.getItem("theme") === "dark";
-});
-
-useEffect(() => {
-  localStorage.setItem(
-    "theme",
-    darkMode ? "dark" : "light"
-  );
-}, [darkMode]);
     const [favorites, setFavorites] = useState(() => {
   const saved = localStorage.getItem("favorites");
   return saved ? JSON.parse(saved) : [];
@@ -44,8 +34,7 @@ useEffect(() => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Splash />} />
-        <Route path="/home" element={<Home favorites={favorites} toggleFavorite={toggleFavorite}  darkMode={darkMode}
-  setDarkMode={setDarkMode} />} />
+        <Route path="/home" element={<Home favorites={favorites} toggleFavorite={toggleFavorite}   />} />
         <Route path="/details/:id" element={<Details  favorites={favorites} toggleFavorite={toggleFavorite}   />} />
         <Route path="/favorites" element={<Favorites  favorites={favorites} toggleFavorite={toggleFavorite} setFavorites={setFavorites} />} />
         <Route path="/about" element={<About />} />
