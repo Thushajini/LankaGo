@@ -7,11 +7,17 @@ import { imageMap } from "../utils/imageMap";
 export default function Favorites({ favorites, toggleFavorite, setFavorites }) {
   const [places, setPlaces] = useState([]);
   useEffect(() => {
-    getPlaces()
-      .then((data) => {
-        setPlaces(data);
-      })
-      .catch((err) => console.log(err));
+    async function loadPlaces() {
+    try {
+      const data = await getPlaces();
+      setPlaces(data);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  loadPlaces();
+
   }, []);
   const favoritePlaces = (places || []).filter((places) =>
     favorites?.includes(Number(places.id)),
