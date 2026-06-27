@@ -1,40 +1,48 @@
 import { useNavigate } from "react-router-dom";
-// import { FaMapMarkerAlt } from "react-icons/fa";
 import bg from "../assets/images/splash.png";
 
 export default function Splash() {
   const navigate = useNavigate();
 
   return (
-     <div className="fixed  w-full bg-gray-100 flex justify-center items-center">
-    
-      <div className="min-h-screen w-full flex flex-col justify-end relative overflow-hidden">
+    <div className="min-h-screen  flex justify-center items-center">
+      {/* Mobile Frame */}
+      <div className="relative w-full  h-screen overflow-hidden  shadow-2xl rounded-none md:rounded-3xl bg-black">
+
+        {/* Background Image */}
         <img
           src={bg}
-          alt="background"
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          alt="Background"
+          className=" absolute inset-0 w-full h-full object-top object-cover"
         />
-     
-      <div className="absolute bottom-0 w-full">
-       <div className=" px-6 pt-4 pb-10 sm:pt-6 sm:pb-10 shadow-2xl text-center italic">
-          <h2 className="text-2xl font-semibold mt-5 text-white">
-            Discover amazing places
-          </h2>
-          <p className="text-white font-semibold text-xl mt-1">
-            and create memories
-          </p>
+
+        {/* Dark Overlay */}
+       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+
+        {/* Bottom Content */}
+        <div className="absolute bottom-0 left-0 w-full">
+
+          {/* Text */}
+       <div className="absolute bottom-28 left-0 w-full px-6 text-center">
+            <h2 className="text-white text-3xl font-bold">
+              Discover Amazing Places
+            </h2>
+
+            <p className="text-white/90 text-lg mt-2">
+              and create unforgettable memories
+            </p>
           </div>
 
-          {/* Start Button */}
-           <div className="fixed  bottom-0 left-0 right-0  shadow-xl  flex justify-between z-50"></div>
+          {/* Button */}
           <button
             onClick={() => navigate("/home")}
-            className=" mt-10  w-full  bg-green-800 hover:bg-green-900  text-white  py-6  rounded-t-xl  text-xl md:text-2xl font-semibold transition duration-300 "
+            className="w-full bg-green-800 hover:bg-green-900 text-white py-5 text-xl font-semibold rounded-t-3xl transition-all duration-300"
           >
-            Start Exploring
+            Start Exploring →
           </button>
+
         </div>
       </div>
-     </div>
+    </div>
   );
 }
